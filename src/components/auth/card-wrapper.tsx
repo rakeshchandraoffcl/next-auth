@@ -7,13 +7,13 @@ import {
 	CardFooter,
 } from "@/components/ui/card";
 import { Header } from "./Header";
-import { Social } from "./Social";
+import { Social } from "./social";
 import { BackButton } from "./back-button";
 
 interface CardWrapperProps {
 	children: React.ReactNode;
 	headerLabel: string;
-	backButtolLabel: string;
+	backButtonLabel: string;
 	backButtonHref: string;
 	showSocial?: boolean;
 }
@@ -21,7 +21,7 @@ interface CardWrapperProps {
 export const CardWrapper = ({
 	children,
 	headerLabel,
-	backButtolLabel,
+	backButtonLabel,
 	backButtonHref,
 	showSocial,
 }: CardWrapperProps) => {
@@ -37,7 +37,7 @@ export const CardWrapper = ({
 				</CardFooter>
 			)}
 			<CardFooter>
-				<BackButton label={backButtolLabel} href={backButtonHref} />
+				<BackButton label={backButtonLabel} href={backButtonHref} />
 			</CardFooter>
 		</Card>
 	);
